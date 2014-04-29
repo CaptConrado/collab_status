@@ -1,5 +1,5 @@
 class Channel < ActiveRecord::Base
-  belongs_to :user_id
+  belongs_to :user
   
   def self.import(file)
     CSV.foreach(file.path, :headers => true, :encoding => 'utf-8') do |row|
