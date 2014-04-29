@@ -4,7 +4,7 @@ class VineImporter
 		file = "db/signed_vine.csv"
 
   	CSV.foreach(file, :headers => true, :encoding => 'windows-1251:utf-8') do |row|
-      Creator.create(
+      User.create(
         name: row[0]
       )
     end
