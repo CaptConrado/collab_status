@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429215724) do
+ActiveRecord::Schema.define(version: 20140429221435) do
 
   create_table "channels", force: true do |t|
     t.string   "cuid"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140429215724) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "payment_type"
+    t.string   "paypal_email"
   end
 
 end
