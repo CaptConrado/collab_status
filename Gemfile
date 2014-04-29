@@ -14,6 +14,7 @@ gem 'devise'
 gem 'pundit'
 gem 'rails_12factor', group: :production
 gem 'faker', '1.1.2'
+gem 'rails_admin'
 
 group :production do
 	gem 'pg'
