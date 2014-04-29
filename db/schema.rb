@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429210306) do
+ActiveRecord::Schema.define(version: 20140429211047) do
+
+  create_table "channels", force: true do |t|
+    t.string   "cuid"
+    t.string   "title"
+    t.integer  "user_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "channels", ["user_id_id"], name: "index_channels_on_user_id_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :channels
+  
+  resources :channels do
+    collection { post :import }
+  end
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
