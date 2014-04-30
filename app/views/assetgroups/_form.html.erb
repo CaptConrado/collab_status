@@ -1,0 +1,29 @@
+<%= form_for(@assetgroup) do |f| %>
+  <% if @assetgroup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assetgroup.errors.count, "error") %> prohibited this assetgroup from being saved:</h2>
+
+      <ul>
+      <% @assetgroup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_field :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :recipient_id %><br>
+    <%= f.text_field :recipient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :custom_id %><br>
+    <%= f.text_field :custom_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

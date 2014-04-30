@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @assetgroup.guid %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @assetgroup.recipient_id %>
+</p>
+
+<p>
+  <strong>Custom:</strong>
+  <%= @assetgroup.custom_id %>
+</p>
+
+<%= link_to 'Edit', edit_assetgroup_path(@assetgroup) %> |
+<%= link_to 'Back', assetgroups_path %>

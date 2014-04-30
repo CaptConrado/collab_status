@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429231650) do
+ActiveRecord::Schema.define(version: 20140430235159) do
+
+  create_table "assetgroups", force: true do |t|
+    t.string   "guid"
+    t.string   "recipient_id"
+    t.string   "custom_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "channels", force: true do |t|
     t.string   "cuid"
@@ -22,6 +31,14 @@ ActiveRecord::Schema.define(version: 20140429231650) do
   end
 
   add_index "channels", ["user_id"], name: "index_channels_on_user_id"
+
+  create_table "payments", force: true do |t|
+    t.float    "amount"
+    t.integer  "payable_id"
+    t.string   "payable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

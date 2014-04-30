@@ -1,0 +1,29 @@
+<h1>Listing assetgroups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Guid</th>
+      <th>Recipient</th>
+      <th>Custom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assetgroups.each do |assetgroup| %>
+      <tr>
+        <td><%= assetgroup.guid %></td>
+        <td><%= assetgroup.recipient_id %></td>
+        <td><%= assetgroup.custom_id %></td>
+        <td><%= link_to 'Show', assetgroup %></td>
+        <td><%= link_to 'Edit', edit_assetgroup_path(assetgroup) %></td>
+        <td><%= link_to 'Destroy', assetgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assetgroup', new_assetgroup_path %>
